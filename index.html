@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoScan Pro | Vehicle Diagnostics</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1>AutoScan Pro</h1>
+      <p>Professional OBD-II Vehicle Diagnostics Tool</p>
+      <div class="status">
+        <span id="connection-status">Disconnected</span>
+        <i class="fas fa-circle status-icon"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard -->
+  <section class="dashboard container">
+    <!-- Live Gauges -->
+    <div class="gauges-grid">
+      <div class="gauge">
+        <div class="gauge-label">Engine RPM</div>
+        <div class="gauge-value" id="rpm">0</div>
+        <div class="gauge-unit">RPM</div>
+      </div>
+      <div class="gauge">
+        <div class="gauge-label">Vehicle Speed</div>
+        <div class="gauge-value" id="speed">0</div>
+        <div class="gauge-unit">km/h</div>
+      </div>
+      <div class="gauge">
+        <div class="gauge-label">Coolant Temp</div>
+        <div class="gauge-value" id="coolant">20</div>
+        <div class="gauge-unit">°C</div>
+      </div>
+      <div class="gauge">
+        <div class="gauge-label">Battery Voltage</div>
+        <div class="gauge-value" id="voltage">12.6</div>
+        <div class="gauge-unit">V</div>
+      </div>
+    </div>
+
+    <!-- Fault Codes Section -->
+    <div class="fault-section">
+      <h2>Fault Codes</h2>
+      <button id="scan-btn" class="btn primary">Scan Vehicle</button>
+      <button id="clear-btn" class="btn secondary" disabled>Clear Codes</button>
+
+      <div id="codes-list">
+        <p>No faults detected. Click "Scan Vehicle" to check.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
